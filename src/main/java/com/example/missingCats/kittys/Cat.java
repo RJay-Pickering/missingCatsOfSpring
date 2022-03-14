@@ -17,7 +17,7 @@ public class Cat {
             strategy = GenerationType.SEQUENCE,
             generator = "cat_sequence"
     )
-    private Long id;
+    private Long animal_id;
     private String name;
     private String description;
     private Integer age;
@@ -25,8 +25,8 @@ public class Cat {
     public Cat() {
     }
 
-    public Cat(Long id, String name, String email, Integer age) {
-        this.id = id;
+    public Cat(Long animal_id, String name, String email, Integer age) {
+        this.animal_id = animal_id;
         this.name = name;
         this.description = email;
         this.age = age;
@@ -38,12 +38,8 @@ public class Cat {
         this.age = age;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public Long getAnimalId() {
+        return animal_id;
     }
 
     public String getName() {
@@ -73,10 +69,10 @@ public class Cat {
     @Override
     public String toString() {
         return "Student{" +
-                "id=" + id +
+                "animal_id=" + animal_id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", age=" + age +
-                '}';
+                '}' + '\'';
     }
 }
